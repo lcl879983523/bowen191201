@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "2d6b83b2-17ef-4a5a-aecb-dda30ed99c92",
+		"name": "bowen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "111",
+			"item": [
+				{
+					"name": "作文大全_1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "677664d8-80e3-4573-9e3a-e51845304414",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"高宁宁\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": " gzip, deflate, br",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": " zh-CN,zh;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": " Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://zuowen.api.juhe.cn/zuowen/baseList?key=e32d8941de210cf1f1261d95ca10eb45&gradeId=32&typeId=50",
+							"protocol": "http",
+							"host": [
+								"zuowen",
+								"api",
+								"juhe",
+								"cn"
+							],
+							"path": [
+								"zuowen",
+								"baseList"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "e32d8941de210cf1f1261d95ca10eb45"
+								},
+								{
+									"key": "gradeId",
+									"value": "32"
+								},
+								{
+									"key": "typeId",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
